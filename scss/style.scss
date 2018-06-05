@@ -1,0 +1,156 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel|Lobster);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif, cursive;
+
+// colors
+$baseColor: #FFFFFF;  //白
+$subColor: #bea300;
+$keyColor: #4c4c4c;   //グレー
+$fontColor: #000000;  //黒
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.Lobster{
+  font-family: 'Lobster', cursive;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Header
+------------------------------------------------------------*/
+header {
+  .top-box {
+    width: 100%;
+    height: auto;
+    }
+  }
+
+
+/* main
+------------------------------------------------------------*/
+//JUNK FOOD
+#JUNKFOOD{
+  background-color: $baseColor;
+  
+  .site-title {
+    font-size: 10.0rem;        //mobile用でもサイズ一緒。。。
+    line-height: normal;
+    }
+  
+  .container {
+    display:flex;              // 並べる
+    flex-direction:row;        //並び方向
+    justify-content: space-around;     // 並べ方（アイテムの間にスペースを均等に割り付け）
+  }
+  
+  .box{
+    margin: 10px 10px 0px;                     // 上10、左右10、下0にマージン
+    padding: 20px;
+    background-color: $keyColor;
+    border-top-left-radius: 4px 4px ;     //左上角とり
+    border-top-right-radius: 4px 4px ;    //右上角とり
+    box-sizing: border-box;  
+    flex: 1;
+  }
+  
+  .title2 {
+    @extend .abel;
+    color: $baseColor;
+    margin-bottom:0px;                //下マージン
+    font-size: 4.0rem;
+    font-weight: bold;
+  }
+  
+  .box2{
+    margin: 0px 10px 10px;                     // 上0、左右10、下10にマージン
+    padding: 20px;
+    background-color: $baseColor;
+    border-bottom-left-radius: 4px 4px ;     //左下角とり
+    border-bottom-right-radius: 4px 4px ;    //右下角とり
+    box-sizing: border-box; 
+    border:3px solid $keyColor;             //枠線   
+    flex: 1;
+ }
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    }
+  }
+
+}
+  
+/* footer
+------------------------------------------------------------*/
+//reset
+#reset{
+ background-color: $keyColor;
+ width: 100%;
+ height: auto;
+
+  .title3 {
+    @extend .abel;
+    color: $baseColor;
+    margin: 10px; padding: 10px;                //上下余白
+    font-size: 2.0rem;
+    font-weight: bold;
+  }
+  
+  .button-readmore{
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    width: 180px;
+    margin: auto;
+    padding: 5px ;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    background-color: #D14E4A;
+  }
+
+  .button-readmore:hover{
+    background-color: #0C7EE8;
+  }
+
+}
