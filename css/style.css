@@ -56,8 +56,8 @@ a {
 @media (max-width: 768px) {
   #header .container {
     height: 290px;
-    background-image: url("../images/lesson7_4.jpg");
-    background-size: contain; } }
+    background-size: cover;
+    background-position: right bottom; } }
 
 /* main
 ------------------------------------------------------------*/

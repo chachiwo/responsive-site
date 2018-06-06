@@ -69,9 +69,10 @@ a {
 @media (max-width: 768px) {
   .container {
     height:290px;
-    background-image:url("../images/lesson7_4.jpg");
-    background-size: contain;
-    }
+    background-size: cover;
+    background-position:right bottom;
+    
+  }
   }
 
   }
