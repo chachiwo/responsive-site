@@ -57,11 +57,23 @@ a {
 
 /* Header
 ------------------------------------------------------------*/
-header {
+//header
+#header {
   .top-box {
-    width: 100%;
-    height: auto;
+    width:100%; 
+    height:500px; 
+    background-image:url("../images/lesson7_3.jpg");
+    background-size:cover;
     }
+
+@media (max-width: 768px) {
+  .container {
+    height:290px;
+    background-image:url("../images/lesson7_4.jpg");
+    background-size: contain;
+    }
+  }
+
   }
 
 
@@ -83,11 +95,10 @@ header {
   }
   
   .box{
-    margin: 10px 10px 0px;                     // 上10、左右10、下0にマージン
-    padding: 20px;
+    margin: 10px;                     // 上下左右に10マージン
+    padding: 5px;
     background-color: $keyColor;
-    border-top-left-radius: 4px 4px ;     //左上角とり
-    border-top-right-radius: 4px 4px ;    //右上角とり
+    border-radius: 4px/4px;                  //角とり
     box-sizing: border-box;  
     flex: 1;
   }
@@ -101,11 +112,10 @@ header {
   }
   
   .box2{
-    margin: 0px 10px 10px;                     // 上0、左右10、下10にマージン
-    padding: 20px;
+    margin: 0px ;                     // 上0、左右10、下10にマージン
+    padding: 5px;
     background-color: $baseColor;
-    border-bottom-left-radius: 4px 4px ;     //左下角とり
-    border-bottom-right-radius: 4px 4px ;    //右下角とり
+    border-radius: 5px/5px;
     box-sizing: border-box; 
     border:3px solid $keyColor;             //枠線   
     flex: 1;
@@ -123,13 +133,14 @@ header {
 //reset
 #reset{
  background-color: $keyColor;
- width: 100%;
+ width: auto;
+ padding: 10px;
  height: auto;
 
   .title3 {
     @extend .abel;
     color: $baseColor;
-    margin: 10px; padding: 10px;                //上下余白
+    margin-bottom: 10px; 
     font-size: 2.0rem;
     font-weight: bold;
   }
@@ -140,7 +151,6 @@ header {
     display: block;
     width: 180px;
     margin: auto;
-    padding: 5px ;
     text-align: center;
     color: #fff;
     -webkit-border-radius: 4px;
@@ -152,5 +162,12 @@ header {
   .button-readmore:hover{
     background-color: #0C7EE8;
   }
+  
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    }
+  }
+
 
 }
