@@ -57,7 +57,8 @@ a {
   #header .container {
     height: 290px;
     background-size: cover;
-    background-position: right bottom; } }
+    background-position: right bottom;
+    background-image: url("../images/lesson7_4.jpg"); } }
 
 /* main
 ------------------------------------------------------------*/
